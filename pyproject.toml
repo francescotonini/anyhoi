@@ -28,7 +28,7 @@ dependencies = [
   "colorlog>=6,<7",
   "datasets>=3,<4",
   "einops>=0,<1",
-  "gdown>=5,<6",
+  "gdown>=5,<7",
   "llava@git+https://github.com/LLaVA-VL/LLaVA-NeXT.git@79ef45a",
   "multiprocess>=0.70",
   "numpy>=1.26,<2",
@@ -53,7 +53,7 @@ dependencies = [
 [dependency-groups]
 data = [
   "datasets>=3,<4",
-  "gdown>=5,<6",
+  "gdown>=5,<7",
   "pytablewriter>=1,<2",
   "sacrebleu>=2,<3",
   "scikit-learn>=1,<2",
