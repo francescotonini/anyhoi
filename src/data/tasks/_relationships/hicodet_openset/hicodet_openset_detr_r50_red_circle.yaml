@@ -1,0 +1,8 @@
+task: hicodet_openset_detr_r50_red_circle
+dataset_path: ${HF_USERNAME}/hicodet_instance_seed_42
+
+test_split: test_detr_r50
+
+doc_to_visual: !function _hicodet_openset_utils.doc_to_visual_red_circle
+
+include: _default_template_yaml

@@ -1,0 +1,6 @@
+task: hicodet_openset_detr_r50
+dataset_path: ${HF_USERNAME}/hicodet_instance_seed_42
+
+test_split: test_detr_r50
+
+include: _default_template_yaml

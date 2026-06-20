@@ -1,0 +1,18 @@
+task: vghoi_openset_gt_tt
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+generation_kwargs:
+  until:
+    - "ASSISTANT:"
+  do_sample: true
+  temperature: 0.2
+  max_new_tokens: 2048
+repeats: 64
+
+filter_list:
+  - name: "take_first@64"
+    filter:
+      - function: "take_first_k"
+        k: 64
+
+include: _default_template_yaml

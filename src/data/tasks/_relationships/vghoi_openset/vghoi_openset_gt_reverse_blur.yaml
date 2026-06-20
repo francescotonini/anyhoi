@@ -1,0 +1,6 @@
+task: vghoi_openset_gt_reverse_blur
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+doc_to_visual: !function _vghoi_openset_utils.doc_to_visual_reverse_blur
+
+include: _default_template_yaml

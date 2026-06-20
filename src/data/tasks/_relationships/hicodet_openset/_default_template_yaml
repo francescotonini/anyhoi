@@ -1,0 +1,27 @@
+task: hicodet_openset
+dataset_kwargs:
+  token: True
+doc_to_visual: !function _hicodet_openset_utils.doc_to_visual
+doc_to_text: !function _hicodet_openset_utils.doc_to_text
+doc_to_target: !function _hicodet_openset_utils.doc_to_target
+process_results: !function _hicodet_openset_utils.process_results
+output_type: generate_until
+test_split: test_gt
+
+model_specific_kwargs:
+  default:
+    question_template: "What are the interactions between the person and the {object_label}?"
+
+generation_kwargs:
+  until:
+    - "ASSISTANT:"
+  max_new_tokens: 2048
+  temperature: 0
+  top_p: 1.0
+  num_beams: 1
+  do_sample: False
+
+metric_list:
+  - metric: create_results_file
+    aggregation: !function _hicodet_openset_utils.create_results_file
+    higher_is_better: true

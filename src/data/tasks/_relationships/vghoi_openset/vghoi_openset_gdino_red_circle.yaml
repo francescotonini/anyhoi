@@ -1,0 +1,8 @@
+task: vghoi_openset_gdino_red_circle
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+test_split: test_gdino
+
+doc_to_visual: !function _vghoi_openset_utils.doc_to_visual_red_circle
+
+include: _default_template_yaml

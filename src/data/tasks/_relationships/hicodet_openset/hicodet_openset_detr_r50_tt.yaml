@@ -1,0 +1,19 @@
+task: hicodet_openset_detr_r50_tt
+dataset_path: ${HF_USERNAME}/hicodet_instance_seed_42
+
+test_split: test_detr_r50
+
+generation_kwargs:
+  until:
+    - "ASSISTANT:"
+  do_sample: true
+  temperature: 0.2
+repeats: 64
+
+filter_list:
+  - name: "take_first@64"
+    filter:
+      - function: "take_first_k"
+        k: 64
+
+include: _default_template_yaml

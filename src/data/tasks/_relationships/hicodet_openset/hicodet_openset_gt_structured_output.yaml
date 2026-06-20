@@ -1,0 +1,10 @@
+task: hicodet_openset_gt_structured_output
+dataset_path: ${HF_USERNAME}/hicodet_instance_seed_42
+
+test_split: test_gt
+
+model_specific_kwargs:
+  default:
+    question_template: "What are the interactions between the person and the {object_label}? Answer the question with triplets of the form: (person, {verb}, {object_label}). Separate triplets with a dot. Use commas within triplets. Examples: '(person, sit on, bike). (person, ride, bike).'. If there are no interactions, answer with (person, 'none', {object_label}). Do not write any other text."
+
+include: _default_template_yaml

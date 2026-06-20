@@ -1,0 +1,4 @@
+task: vghoi_openset_gt
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+include: _default_template_yaml

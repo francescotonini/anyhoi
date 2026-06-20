@@ -1,0 +1,6 @@
+task: vghoi_openset_gt_red_circle
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+doc_to_visual: !function _vghoi_openset_utils.doc_to_visual_red_circle
+
+include: _default_template_yaml

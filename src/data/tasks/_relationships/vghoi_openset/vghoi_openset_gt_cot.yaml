@@ -1,0 +1,8 @@
+task: vghoi_openset_gt_cot
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+model_specific_kwargs:
+  default:
+    question_template: "What are the interactions between the person and the {object_label}? Think step by step."
+
+include: _default_template_yaml

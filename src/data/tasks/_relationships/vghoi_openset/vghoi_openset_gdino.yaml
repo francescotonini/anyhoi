@@ -1,0 +1,6 @@
+task: vghoi_openset_gdino
+dataset_path: ${HF_USERNAME}/vghoi_instance_seed_42
+
+test_split: test_gdino
+
+include: _default_template_yaml
